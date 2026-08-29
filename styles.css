@@ -1,0 +1,119 @@
+/* SPDX-FileCopyrightText: 2026 QiZhang */
+/* SPDX-License-Identifier: GPL-3.0-only */
+
+html,
+body {
+  margin: 0;
+  background: #05040d;
+}
+
+.night-sky {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: #05040d;
+  font-family: "Noto Serif SC", "Songti SC", STSong, SimSun, Georgia, serif;
+  user-select: none;
+}
+
+.sky-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  cursor: crosshair;
+}
+
+.eq-caption {
+  position: absolute;
+  top: 4.5%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  color: rgb(190 196 235 / 40%);
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-align: center;
+}
+
+.love-caption {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  color: rgb(255 205 170 / 78%);
+  font-size: clamp(13px, 1.8vw, 18px);
+  letter-spacing: 0.55em;
+  text-align: center;
+  text-indent: 0.55em;
+  text-shadow: 0 0 18px rgb(255 130 120 / 35%);
+}
+
+.gift-footer {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.gift-rule {
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(255 196 107 / 65%), transparent);
+}
+
+.gift-text {
+  margin: 0;
+  color: #efdcbc;
+  font-size: clamp(18px, 2.6vw, 26px);
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  text-shadow: 0 0 22px rgb(255 170 110 / 40%), 0 0 2px rgb(255 220 180 / 60%);
+}
+
+.gift-sub {
+  margin: 0;
+  color: rgb(200 190 220 / 45%);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;
+}
+
+.hint {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  margin: 0;
+  color: rgb(170 170 205 / 30%);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fade-up 2.2s ease-out forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    opacity: 1;
+    animation: none;
+  }
+}
